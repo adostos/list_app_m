@@ -10,6 +10,10 @@ html {
 	box-sizing: inherit;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 /* clearfix */
 .group:before, .container:before,
 .group:after, .container:after {
@@ -182,6 +186,7 @@ li:nth-child(5n+5) article { background: #fff385; }
   color: white;
   padding: 5px 15px;
   border: 1px white solid;
+  outline: none;
   border-radius: 10px;
   background-color: transparent;
   transition: all 0.2s ease-in-out;
@@ -193,4 +198,8 @@ li:nth-child(5n+5) article { background: #fff385; }
   color: black;
   border-radius: 10px;
   transition: left to right 0.2s ease-in-out;
+}
+
+a > span {
+  color: white;
 }

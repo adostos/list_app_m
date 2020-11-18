@@ -9,12 +9,13 @@
      <title>Vue.js</title>
 </head>
 <body>
-
-     <div id="app">
+     <div id="app" v-cloak>
           <h2><strong>REGISTER</strong></h2>
           <transition-group name="dude" tag="ul">
                <li class="dude" v-for="(dude, index) in characters" :key="index">
-                    <a class="ctrl" @click.prevent="remove(dude)">X</a>
+                    <a class="ctrl" @click.prevent="remove(dude)">
+                         <span>✖️</span>
+                    </a>
                     <article :class="{ faded: dude.cool < 0, gold: dude.cool > 10 }">
                          {{ dude.who }}
                          <span>{{ dude.wat }}</span>
